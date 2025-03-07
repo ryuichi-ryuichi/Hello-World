@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 {
     "key": "value"
 }
+=======
+{"test": "data"}
+>>>>>>> f4c4356 (Remove Hello-World directory from staging area)

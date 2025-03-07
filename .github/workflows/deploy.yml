@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 name: Lambda Deploy
 
+=======
+name: Test GitHub Actions
+>>>>>>> f4c4356 (Remove Hello-World directory from staging area)
 
 on:
   push:
     branches:
+<<<<<<< HEAD
       - main  # mainブランチにpushされた時にトリガーされます
 
 jobs:
@@ -28,3 +33,17 @@ jobs:
     - name: Deploy Lambda Function
       run: |
         aws lambda update-function-code --function-name myLambdaFunction --zip-file fileb://lambda_function.zip  # Lambda関数をデプロイ
+=======
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Test AWS CLI
+        run: aws --version
+>>>>>>> f4c4356 (Remove Hello-World directory from staging area)
