@@ -1,0 +1,40 @@
+{
+    "FunctionName": "S3EventProcessor",
+    "FunctionArn": "arn:aws:lambda:ap-northeast-1:122610513156:function:S3EventProcessor",
+    "Runtime": "nodejs16.x",
+    "Role": "arn:aws:iam::122610513156:role/LambdaExecutionRole",
+    "Handler": "index.handler",
+    "CodeSize": 283,
+    "Description": "",
+    "Timeout": 3,
+    "MemorySize": 128,
+    "LastModified": "2025-03-07T03:53:15.000+0000",
+    "CodeSha256": "PFf4dubLed4O/7VZGud/0o/nI28327vXw556AG8x0Ps=",
+    "Version": "$LATEST",
+    "TracingConfig": {
+        "Mode": "PassThrough"
+    },
+    "RevisionId": "3e888d82-bc91-4033-934a-bba4039b90a5",
+    "State": "Active",
+    "LastUpdateStatus": "InProgress",
+    "LastUpdateStatusReason": "The function is being created.",
+    "LastUpdateStatusReasonCode": "Creating",
+    "PackageType": "Zip",
+    "Architectures": [
+        "x86_64"
+    ],
+    "EphemeralStorage": {
+        "Size": 512
+    },
+    "SnapStart": {
+        "ApplyOn": "None",
+        "OptimizationStatus": "Off"
+    },
+    "RuntimeVersionConfig": {
+        "RuntimeVersionArn": "arn:aws:lambda:ap-northeast-1::runtime:babdf21d739bfda4c9f34221ce1889f4857d277324ffe622cf48faa2e71917b3"
+    },
+    "LoggingConfig": {
+        "LogFormat": "Text",
+        "LogGroup": "/aws/lambda/S3EventProcessor"
+    }
+}
