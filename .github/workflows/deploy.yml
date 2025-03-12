@@ -1,49 +1,5 @@
 <<<<<<< HEAD
-name: Lambda Deploy
-
+(現在の変更内容)
 =======
-name: Test GitHub Actions
->>>>>>> f4c4356 (Remove Hello-World directory from staging area)
-
-on:
-  push:
-    branches:
-<<<<<<< HEAD
-      - main  # mainブランチにpushされた時にトリガーされます
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2  # リポジトリのコードをチェックアウト
-
-    - name: Set up AWS CLI
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}  # GitHub Secretsで設定したアクセスキーID
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  # GitHub Secretsで設定したシークレットアクセスキー
-        aws-region: ap-northeast-1  # 使用するAWSリージョン（東京）
-
-    - name: Install dependencies
-      run: |
-        npm install  # 必要な依存パッケージをインストール
-
-    - name: Deploy Lambda Function
-      run: |
-        aws lambda update-function-code --function-name myLambdaFunction --zip-file fileb://lambda_function.zip  # Lambda関数をデプロイ
-=======
-      - main
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Test AWS CLI
-        run: aws --version
->>>>>>> f4c4356 (Remove Hello-World directory from staging area)
+(リベースで適用しようとしている変更内容)
+>>>>>> 208e222... Add GitHub Actions workflow for AWS Lambda deployment
