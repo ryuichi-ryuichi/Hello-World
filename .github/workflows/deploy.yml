@@ -3,7 +3,7 @@ name: Lambda Deploy
 on:
   push:
     branches:
-      - main
+      - main  # mainブランチにpushされた時にトリガーされます
 
 jobs:
   deploy:
@@ -11,19 +11,19 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2  # リポジトリのコードをチェックアウト
 
     - name: Set up AWS CLI
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ap-northeast-1
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}  # GitHub Secretsで設定したアクセスキーID
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  # GitHub Secretsで設定したシークレットアクセスキー
+        aws-region: ap-northeast-1  # 使用するAWSリージョン（東京）
 
     - name: Install dependencies
       run: |
-        npm install
+        npm install  # 必要な依存パッケージをインストール
 
     - name: Deploy Lambda Function
       run: |
-        aws lambda update-function-code --function-name myLambdaFunction --zip-file fileb://lambda_function.zip
+        aws lambda update-function-code --function-name myLambdaFunction --zip-file fileb://lambda_function.zip  # Lambda関数をデプロイ
