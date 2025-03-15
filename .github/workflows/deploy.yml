@@ -1,12 +1,5 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-(現在の変更内容)
+# ここがリモートリポジトリの内容
 =======
-(リベースで適用しようとしている変更内容)
->>>>>> 208e222... Add GitHub Actions workflow for AWS Lambda deployment
-=======
-on:
-  push:
-    branches:
-      - main  # ここを変更
->>>>>>> 785ac9f (Update deploy branch to main)
+# ここがローカルの変更内容
+>>>>>>>
